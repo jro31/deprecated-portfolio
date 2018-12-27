@@ -1,0 +1,13 @@
+.profile {
+  background-color: orange;
+}
+
+/* For big screens */
+#profile_column {
+  color: red;
+}
+
+/* For small screens */
+#profile_navbar {
+  color: blue;
+}
