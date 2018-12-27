@@ -1,8 +1,9 @@
 #banner {
-  background-image: url('../images/mountain.jpg');
-  background-position: center top;
-  background-size: 100% 150%;
+  background-image: url('../images/mountain_test.jpg');
+  /*background-position: center top;*/
+  background-position: 50% 60%;
+  /*background-size: 100% 150%;*/
   height: 35%;
-  width: 75%;
   overflow: hidden;
+  flex: 2;
 }

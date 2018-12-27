@@ -1,16 +1,28 @@
-const flex_panels = document.querySelectorAll('.flex_panel');
+const flex_panel_container = document.querySelector('#flex_panels')
+const every_flex_panel = document.querySelectorAll('.flex_panel');
+const profile_column = document.querySelector('.profile')
 
-function toggleOpen() {
-  console.log('tard');
+function toggleSize() {
   this.classList.toggle('open');
-}
+  console.log('1');
+};
 
 function toggleOpenActive(e) {
-  // console.log(e)
   if(e.propertyName.includes('flex')) {
-    this.classList.toggle('open_active')
-  }
-}
+    this.classList.toggle('open_active');
+  };
+  console.log('2');
+};
 
-flex_panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-flex_panels.forEach(panel => panel.addEventListener('transitionend', toggleOpenActive));
+function toggleWidth() {
+  this.classList.toggle('wide');
+  flex_panel_container.classList.toggle('hide');
+  profile_column.classList.toggle('wide_active');
+  console.log('3');
+};
+
+every_flex_panel.forEach(panel => panel.addEventListener('click', toggleSize));
+every_flex_panel.forEach(panel => panel.addEventListener('transitionend', toggleOpenActive));
+
+profile_column.addEventListener('click', toggleWidth);
+
