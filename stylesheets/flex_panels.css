@@ -1,7 +1,27 @@
 #flex_panels {
-  background-color: red;
+  height: 65%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex_panel {
-  color: silver;
+  border: 1px solid red;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#flex_panel1 {
+  background-color: gold;
+}
+
+#flex_panel2 {
+  background-color: silver;
+}
+
+#flex_panel3 {
+  background-color: orange;
 }

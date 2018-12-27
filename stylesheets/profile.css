@@ -4,10 +4,22 @@
 
 /* For big screens */
 #profile_column {
-  color: red;
+  width: 25%;
+  height: 100%;
+  background-color: #02C3BD;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-top: 5%;
+}
+
+#profile_picture {
+  width: 50%;
+  border-radius: 50%;
+  margin: 2%;
 }
 
 /* For small screens */
 #profile_navbar {
-  color: blue;
+  height: 8%;
 }
