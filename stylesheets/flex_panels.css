@@ -24,7 +24,6 @@
 }
 
 .flex_panel {
-  /*border: 1px solid red;*/
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -48,8 +47,6 @@
   /*align-items: center;*/
   transition: transform 0.5s ease-in-out 0.7s;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-
-  /*flex-wrap: wrap;*/
 }
 
 .flex_panel > *:first-child {
@@ -74,6 +71,7 @@
 
 .flex_panel > div {
   padding: 3%;
+  overflow-y: visible;
 }
 
 #flex_panel1 {
