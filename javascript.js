@@ -1,7 +1,6 @@
 const flex_panel_container = document.querySelector('#flex_panels');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
 const profile_column = document.querySelector('.profile');
-// const link_tags = document.querySelectorAll('a');
 
 function toggleSize(e) {
   if(e.target.parentElement.target !== '_blank') {
@@ -24,6 +23,7 @@ function toggleWidth(e) {
     this.classList.toggle('wide');
     flex_panel_container.classList.toggle('hide');
     profile_column.classList.toggle('wide_active');
+    profile_column.classList.toggle('arrow_be_seeing_ya');
   };
 };
 

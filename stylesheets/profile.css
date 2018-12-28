@@ -3,6 +3,14 @@
   background-color: #EFF7CF;
   color: #273469;
   border-left: 3px ridge rgba(211, 211, 211, 0.5);
+  background-image: url('../images/down.svg');
+  background-repeat: no-repeat;
+  background-position: center 25em;
+  background-size: 12em;
+}
+
+.profile.arrow_be_seeing_ya {
+  background-position: center 150%;
 }
 
 .profile:hover {
@@ -14,9 +22,11 @@
 }
 
 #profile_column {
-  padding-top: 5%;
+  padding: 2vh 2% 0 2%;
   flex: 1;
-  transition: flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+  transition:
+    flex 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background 1s cubic-bezier(0.25, 0.1, 0.25, 1) 1s;
 }
 
 #profile_column.wide {
@@ -32,21 +42,19 @@
 }
 
 .profile > * {
-  transition: transform 0.7s ease-in-out 0.7s;
+  transition: transform 0.7s ease-in-out 0.9s;
 }
 
-.profile > *:nth-child(4) {
-  transform: translateY(calc(100vh - 25%));
+.profile > .profile_info {
+  transform: translateY(35em);
+  height: 27em;
+  font-size: 1em;
+  padding: 2vh 0;
+  overflow-y: scroll;
 }
 
-.profile.wide_active > *:nth-child(4) {
+.profile.wide_active > .profile_info {
   transform: translateY(0);
-  /*transition: transform 0.7s linear 0.7s;*/
-}
-
-.profile .profile_info {
-  height: 45%;
-
 }
 
 .profile .social_media {
