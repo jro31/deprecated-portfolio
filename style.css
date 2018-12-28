@@ -3,7 +3,7 @@
 @import 'stylesheets/flex_panels.css';
 
 * {
-  color: white;
+  /*color: #ABA361;*/
   text-align: center;
   box-sizing: border-box;
 }

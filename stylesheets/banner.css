@@ -1,10 +1,10 @@
 #banner {
-  background-image: url('../images/mountain_test.jpg');
+  background-image: url('../images/mountain.jpg');
   /*background-position: center top;*/
   background-position: 50% 60%;
   /*background-size: 100% 150%;*/
   height: 35%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   flex: 2;
   transition: flex 0.7s ease-in-out 0.7s;
 }
