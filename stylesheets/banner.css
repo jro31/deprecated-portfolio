@@ -6,4 +6,5 @@
   height: 35%;
   overflow: hidden;
   flex: 2;
+  transition: flex 0.7s ease-in-out 0.7s;
 }
