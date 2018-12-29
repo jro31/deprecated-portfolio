@@ -1,6 +1,7 @@
 const flex_panel_container = document.querySelector('#flex_panels');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
 const profile_column = document.querySelector('.profile');
+const profile_picture = document.querySelector('#profile_picture')
 
 function toggleSize(e) {
   if(e.target.parentElement.target !== '_blank') {
@@ -24,6 +25,7 @@ function toggleWidth(e) {
     flex_panel_container.classList.toggle('hide');
     profile_column.classList.toggle('wide_active');
     profile_column.classList.toggle('arrow_be_seeing_ya');
+    profile_picture.classList.toggle('small_face');
   };
 };
 

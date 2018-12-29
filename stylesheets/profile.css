@@ -5,24 +5,38 @@
   border-left: 3px ridge rgba(211, 211, 211, 0.5);
   background-image: url('../images/down.svg');
   background-repeat: no-repeat;
-  background-position: center 25em;
-  background-size: 12em;
+  background-position: center 75%;
+  background-size: 50%;
+  height: 100%;
 }
 
 .profile.arrow_be_seeing_ya {
-  background-position: center 150%;
+  background-position: center 500%;
 }
 
 .profile:hover {
   cursor: pointer;
 }
 
+.profile #titles {
+  height: 14%;
+  overflow: visible;
+}
+
 .profile h1, .profile h3 {
   text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
 }
 
+.profile h1 {
+  font-size: 250%;
+}
+
+.profile h3 {
+  font-size: 200%;
+}
+
 #profile_column {
-  padding: 2vh 2% 0 2%;
+  padding: 2% 2% 0 2%;
   flex: 1;
   transition:
     flex 1s cubic-bezier(0.25, 0.1, 0.25, 1),
@@ -34,11 +48,16 @@
 }
 
 #profile_picture {
-  height: 23%;
+  height: 25%;
   border-radius: 50%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  margin: 1vh 0 1vh 0;
+  margin: 2% 0 2% 0;
   border: 2px ridge rgba(255, 255, 255, 1.0);
+  transition: all 0.7s ease-in-out 1s;
+}
+
+#profile_picture.small_face {
+  height: 15%;
 }
 
 .profile > * {
@@ -46,28 +65,50 @@
 }
 
 .profile > .profile_info {
-  transform: translateY(35em);
-  height: 27em;
-  font-size: 1em;
-  padding: 2vh 0;
+  transform: translateY(150%);
+  height: 47%;
+  font-size: 120%;
+  padding: 2% 0;
   overflow-y: scroll;
 }
 
 .profile.wide_active > .profile_info {
   transform: translateY(0);
+  height: 57%;
 }
 
 .profile .social_media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
+  font-size: 350%;
+  width: inherit;
+  height: 12%;
 }
 
 .profile .social_media a {
   color: #273469;
 }
 
-.profile .social_media > * {
-  min-width: 20px;
+.profile #linkedin {
+  display: inline;
+}
+
+.profile #github {
+  display: inline;
+}
+
+@media only screen and (max-width: 950px) {
+  .profile {
+    background-image: none;
+  }
+
+  .profile > .profile_info {
+    transform: translateY(0);
+  }
+
+  #profile_picture.small_face {
+    height: 25%;
+  }
+
+  .profile.wide_active > .profile_info {
+    height: 47%;
+  }
 }

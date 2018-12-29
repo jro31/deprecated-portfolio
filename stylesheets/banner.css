@@ -5,3 +5,9 @@
   flex: 2;
   transition: flex 0.7s ease-in-out 0.7s;
 }
+
+@media only screen and (max-width: 950px) {
+  #banner {
+    display: none;
+  }
+}
