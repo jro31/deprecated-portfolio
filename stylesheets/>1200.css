@@ -88,6 +88,10 @@
   transition: flex 0.7s ease-in-out 0.7s;
 }
 
+#flex_blocks.hide {
+  flex: 0;
+}
+
 .flex_block > *:first-child {
   transform: translateX(-100%);
 }
