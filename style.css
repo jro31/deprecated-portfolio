@@ -1,6 +1,6 @@
-@import 'stylesheets/<800.css' screen and (max-width: 799px);
-@import 'stylesheets/800-1200.css' screen and (min-width: 800px) and (max-width: 1200px);
-@import 'stylesheets/>1200.css' screen and (min-width: 1201px);
+@import 'stylesheets/<800.css' (max-width: 1200px);
+/*@import 'stylesheets/800-1200.css' (min-width: 800px) and (max-width: 1200px);*/
+@import 'stylesheets/>1200.css' (min-width: 1201px);
 
 * {
   text-align: center;
