@@ -1,41 +1,34 @@
 const flex_panel_container = document.getElementById('flex_panels');
+const flex_blocks_container = document.getElementById('flex_blocks');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
+const every_flex_block = document.querySelectorAll('.flex_block');
 const profile_panel = document.getElementById('profile_panel');
 const profile_column = document.getElementById('profile_column');
 const profile_picture_div = document.querySelectorAll('.profile_picture');
 const profile_titles = document.querySelectorAll('.profile_titles');
 const profile_info = document.querySelectorAll('.profile_info');
-const flex_panel1 = document.getElementById('flex_panel1');
-const flex_panel2 = document.getElementById('flex_panel2');
-const flex_panel3 = document.getElementById('flex_panel3');
+const flex_thing1 = document.querySelectorAll('.flex_thing1');
+const flex_thing2 = document.querySelectorAll('.flex_thing2');
+const flex_thing3 = document.querySelectorAll('.flex_thing3');
 
 // For <800 screens
 function toggleFullScreenProfile() {
   flex_panel_container.classList.toggle('hide');
+  profile_panel.classList.toggle('big_face');
   profile_panel.classList.toggle('info_appear');
+  profile_panel.classList.remove('mini_profile');
+  every_flex_panel.forEach(function(panel) {
+    panel.classList.remove('open');
+    panel.classList.remove('open_active');
+  });
 }
 
 // For <800 screens
-
-
-// For >1200 screens
-function toggleProfileWidth(e) {
-  if(e.target.parentElement.target !== '_blank') {
-    this.classList.toggle('wide');
-    flex_panel_container.classList.toggle('hide');
-    profile_column.classList.toggle('info_appear');
-    profile_column.classList.toggle('arrow_be_seeing_ya');
-    profile_column.classList.toggle('small_face');
-  };
-};
-
-// For >1200 screens
 function toggleFlexPanelSize(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('open');
     this.classList.toggle('open_active');
 
-    // profile_panel.classLis
 
     const this_id = this.id;
 
@@ -43,6 +36,40 @@ function toggleFlexPanelSize(e) {
       if(panel.id !== this_id) {
         panel.classList.remove('open');
         panel.classList.remove('open_active');
+      };
+    });
+    if(this.classList.contains('open')) {
+      profile_panel.classList.add('mini_profile');
+      profile_panel.classList.remove('info_appear');
+    } else {
+      profile_panel.classList.remove('mini_profile');
+    };
+  };
+};
+
+// For >1200 screens
+function toggleProfileWidth(e) {
+  if(e.target.parentElement.target !== '_blank') {
+    this.classList.toggle('wide');
+    flex_blocks_container.classList.toggle('hide');
+    profile_column.classList.toggle('info_appear');
+    profile_column.classList.toggle('arrow_be_seeing_ya');
+    profile_column.classList.toggle('small_face');
+  };
+};
+
+// For >1200 screens
+function toggleFlexBlockSize(e) {
+  if(e.target.parentElement.target !== '_blank') {
+    this.classList.toggle('open');
+    this.classList.toggle('open_active');
+
+    const this_id = this.id;
+
+    every_flex_block.forEach(function(block) {
+      if(block.id !== this_id) {
+        block.classList.remove('open');
+        block.classList.remove('open_active');
       };
     });
   };
@@ -80,7 +107,8 @@ function addContent() {
   `
   });
 
-  flex_panel1.innerHTML = `
+  flex_thing1.forEach(function(flexInfo) {
+    flexInfo.innerHTML = `
   <div>
     <a href="https://www.plantasusual.com/" target="_blank">
       <h3>Plant as Usual</h3>
@@ -99,8 +127,10 @@ function addContent() {
     </a>
   </div>
   `
+  });
 
-  flex_panel2.innerHTML = `
+  flex_thing2.forEach(function(flexInfo) {
+    flexInfo.innerHTML = `
   <div>
     <h3>Technical skills</h3>
     <p>
@@ -118,8 +148,10 @@ function addContent() {
     </p>
   </div>
   `
+  });
 
-  flex_panel3.innerHTML = `
+  flex_thing3.forEach(function(flexInfo) {
+    flexInfo.innerHTML = `
   <div>
     <h3>Le Wagon</h3>
     <p>
@@ -137,10 +169,12 @@ function addContent() {
     </p>
   </div>
   `
+  });
 };
 
 profile_panel.addEventListener('click', toggleFullScreenProfile);
 every_flex_panel.forEach(panel => panel.addEventListener('click', toggleFlexPanelSize));
+every_flex_block.forEach(block => block.addEventListener('click', toggleFlexBlockSize));
 profile_column.addEventListener('click', toggleProfileWidth);
 
 document.addEventListener("DOMContentLoaded", addContent);

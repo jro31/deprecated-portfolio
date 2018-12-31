@@ -77,23 +77,46 @@
 
 
 
-/* Flex panels start */
+/* Flex blocks start */
 
 #flex_panels {
+  display: none;
+}
+
+#flex_blocks {
   flex: 3;
   transition: flex 0.7s ease-in-out 0.7s;
 }
 
-.flex_panel > *:first-child {
+#flex_blocks.hide {
+  flex: 0;
+}
+
+.flex_block > *:first-child {
   transform: translateX(-100%);
 }
 
-.flex_panel > *:last-child {
+.flex_block > *:last-child {
   transform: translateX(100%);
 }
 
-.flex_panel.open {
+.flex_block.open {
   flex: 4;
 }
 
-/* Flex panels finish */
+#flex_block1 {
+  background-position: 0 18%;
+  background-size: cover;
+}
+
+#flex_block2 {
+  background-position: 0 65%;
+  background-size: cover;
+}
+
+#flex_block3 {
+  background-position: 0 15%;
+  background-size: cover;
+}
+
+/* Flex blocks finish */
