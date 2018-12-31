@@ -7,23 +7,26 @@ const profile_column = document.getElementById('profile_column');
 const profile_picture_div = document.querySelectorAll('.profile_picture');
 const profile_titles = document.querySelectorAll('.profile_titles');
 const profile_info = document.querySelectorAll('.profile_info');
+const profile_social_media = document.querySelectorAll('.profile_social_media');
 const flex_thing1 = document.querySelectorAll('.flex_thing1');
 const flex_thing2 = document.querySelectorAll('.flex_thing2');
 const flex_thing3 = document.querySelectorAll('.flex_thing3');
 
-// For <800 screens
-function toggleFullScreenProfile() {
-  flex_panel_container.classList.toggle('hide');
-  profile_panel.classList.toggle('big_face');
-  profile_panel.classList.toggle('info_appear');
-  profile_panel.classList.remove('mini_profile');
-  every_flex_panel.forEach(function(panel) {
-    panel.classList.remove('open');
-    panel.classList.remove('open_active');
-  });
-}
+// For phone/tablet screens
+function toggleFullScreenProfile(e) {
+  if(e.target.parentElement.target !== '_blank') {
+    flex_panel_container.classList.toggle('hide');
+    profile_panel.classList.toggle('big_face');
+    profile_panel.classList.toggle('info_appear');
+    profile_panel.classList.remove('mini_profile');
+    every_flex_panel.forEach(function(panel) {
+      panel.classList.remove('open');
+      panel.classList.remove('open_active');
+    });
+  };
+};
 
-// For <800 screens
+// For phone/tablet screens
 function toggleFlexPanelSize(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('open');
@@ -47,7 +50,7 @@ function toggleFlexPanelSize(e) {
   };
 };
 
-// For >1200 screens
+// For big screens
 function toggleProfileWidth(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('wide');
@@ -58,7 +61,7 @@ function toggleProfileWidth(e) {
   };
 };
 
-// For >1200 screens
+// For big screens
 function toggleFlexBlockSize(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('open');
@@ -105,6 +108,13 @@ function addContent() {
     Now I'm looking for a project that I'm passionate about, to which I can dedicate myself as I continue to grow, and that allows me to be expressive through coding.
   </p>
   `
+  });
+
+  profile_social_media.forEach(function(socialMedia) {
+    socialMedia.innerHTML = `
+      <div id="linkedin"><a href="https://www.linkedin.com/in/jethrowilliams/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+      <div id="github"><a href="https://github.com/jro31" target="_blank"><i class="fab fa-github"></i></a></div>
+    `
   });
 
   flex_thing1.forEach(function(flexInfo) {
@@ -158,7 +168,7 @@ function addContent() {
       A nine-week full-stack web developement bootcamp which technically focussed on the necessary skills needed to build fully-functional Ruby on Rails projects, but also stressed the importance of team-work and collaboration.
     </p>
   </div>
-  <h3>Education</h3>
+  <h2>Education</h2>
   <div>
     <h3>Further Education</h3>
     <p>

@@ -1,13 +1,13 @@
 /* Banner start */
 
-
-
-/* Banner finish */
-
 #banner {
   height: 35%;
   flex: 2;
 }
+
+/* Banner finish */
+
+
 
 /* Profile start */
 
@@ -36,6 +36,14 @@
   background-position: center 500%;
 }
 
+#profile_column #profile_picture {
+  height: 25%;
+}
+
+#profile_column.small_face #profile_picture {
+  height: 15%;
+}
+
 #profile_column .profile_titles {
   height: 14%;
 }
@@ -46,14 +54,6 @@
 
 #profile_column h3 {
   font-size: 200%;
-}
-
-#profile_column #profile_picture {
-  height: 25%;
-}
-
-#profile_column.small_face #profile_picture {
-  height: 15%;
 }
 
 #profile_column > .profile_info {
@@ -68,7 +68,7 @@
   height: 57%;
 }
 
-#profile_column .social_media {
+#profile_column .profile_social_media {
   font-size: 350%;
   height: 12%;
 }

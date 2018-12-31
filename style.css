@@ -74,11 +74,11 @@ body {
   overflow-y: scroll;
 }
 
-.profile .social_media {
+.profile .profile_social_media {
   width: inherit;
 }
 
-.profile .social_media a {
+.profile .profile_social_media a {
   color: #273469;
 }
 

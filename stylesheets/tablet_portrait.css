@@ -1,12 +1,12 @@
 /* Banner start */
 
-
-
-/* Banner finish */
-
 #banner {
   display: none;
 }
+
+/* Banner finish */
+
+
 
 /* Profile start */
 
@@ -30,27 +30,11 @@
 }
 
 #profile_panel.mini_profile {
-  flex: 1;
-}
-
-#profile_panel .profile_titles {
-  height: 14%;
-}
-
-#profile_panel h1 {
-  font-size: 250%;
-}
-
-#profile_panel h3 {
-  font-size: 200%;
-}
-
-#profile_panel.mini_profile h3 {
-  transform: translateX(100%);
+  flex: 0.8;
 }
 
 #profile_panel #profile_picture {
-  height: 15%;
+  height: 22%;
 }
 
 #profile_panel.mini_profile #profile_picture {
@@ -59,13 +43,25 @@
 }
 
 #profile_panel.big_face #profile_picture {
-  height: 25%;
+  height: 35%;
+}
+
+#profile_panel h1 {
+  font-size: 60px;
+}
+
+#profile_panel h3 {
+  font-size: 45px;
+}
+
+#profile_panel.mini_profile h3 {
+  transform: translateX(100%);
 }
 
 #profile_panel > .profile_info {
   transform: translateY(300%);
   height: 47%;
-  font-size: 120%;
+  font-size: 40px;
   padding: 2% 0;
 }
 
@@ -73,9 +69,13 @@
   transform: translateY(0);
 }
 
-#profile_panel .social_media {
-  font-size: 350%;
-  height: 12%;
+#profile_panel .profile_social_media {
+  font-size: 80px;
+  height: 10%;
+}
+
+#profile_panel.mini_profile .profile_social_media {
+  transform: translateX(-100%);
 }
 
 /* Profile finish */
@@ -95,6 +95,18 @@
 
 #flex_panels.hide {
   flex: 0;
+}
+
+#flex_panels h2 {
+  font-size: 55px;
+}
+
+#flex_panels h3 {
+  font-size: 45px;
+}
+
+#flex_panels p {
+  font-size: 35px;
 }
 
 .flex_panel > *:first-child {
