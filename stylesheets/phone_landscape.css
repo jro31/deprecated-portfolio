@@ -62,10 +62,6 @@
   height: 25%;
 }
 
-/*#profile_panel #profile_picture.small_face {
-  height: 15%;
-}*/
-
 #profile_panel > .profile_info {
   transform: translateY(300%);
   height: 47%;
@@ -76,10 +72,6 @@
 #profile_panel.info_appear > .profile_info {
   transform: translateY(0);
 }
-
-/*#profile_panel.wide_active > .profile_info {
-  height: 57%;
-}*/
 
 #profile_panel .social_media {
   font-size: 350%;
