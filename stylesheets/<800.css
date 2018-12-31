@@ -15,7 +15,7 @@
 }
 
 #profile_panel {
-  flex: 1;
+  flex: 4;
   background-position: center 75%;
   background-size: 20%;
   height: 100%;
@@ -27,6 +27,10 @@
 
 #profile_panel .full_screen_profile {
   flex: 10;
+}
+
+#profile_panel.mini_profile {
+  flex: 1;
 }
 
 #profile_panel .profile_titles {
@@ -41,16 +45,29 @@
   font-size: 200%;
 }
 
+#profile_panel.mini_profile h3 {
+  transform: translateX(100%);
+}
+
 #profile_panel #profile_picture {
   height: 15%;
 }
 
-#profile_panel #profile_picture.small_face {
-  height: 15%;
+#profile_panel.mini_profile #profile_picture {
+  height: 0;
+  border: none;
 }
 
+#profile_panel.big_face #profile_picture {
+  height: 25%;
+}
+
+/*#profile_panel #profile_picture.small_face {
+  height: 15%;
+}*/
+
 #profile_panel > .profile_info {
-  transform: translateY(150%);
+  transform: translateY(300%);
   height: 47%;
   font-size: 120%;
   padding: 2% 0;
@@ -80,8 +97,12 @@
 }
 
 #flex_panels {
-  flex: 2;
+  flex: 8;
   transition: flex 0.7s ease-in-out;
+}
+
+#flex_panels.hide {
+  flex: 0;
 }
 
 .flex_panel > *:first-child {
@@ -93,7 +114,7 @@
 }
 
 .flex_panel.open {
-  flex: 4;
+  flex: 6;
 }
 
 #flex_panel1 {

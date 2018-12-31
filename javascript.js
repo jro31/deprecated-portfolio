@@ -1,4 +1,5 @@
 const flex_panel_container = document.getElementById('flex_panels');
+const flex_blocks_container = document.getElementById('flex_blocks');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
 const every_flex_block = document.querySelectorAll('.flex_block');
 const profile_panel = document.getElementById('profile_panel');
@@ -13,7 +14,13 @@ const flex_thing3 = document.querySelectorAll('.flex_thing3');
 // For <800 screens
 function toggleFullScreenProfile() {
   flex_panel_container.classList.toggle('hide');
+  profile_panel.classList.toggle('big_face');
   profile_panel.classList.toggle('info_appear');
+  profile_panel.classList.remove('mini_profile');
+  every_flex_panel.forEach(function(panel) {
+    panel.classList.remove('open');
+    panel.classList.remove('open_active');
+  });
 }
 
 // For <800 screens
@@ -21,6 +28,7 @@ function toggleFlexPanelSize(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('open');
     this.classList.toggle('open_active');
+
 
     const this_id = this.id;
 
@@ -30,6 +38,12 @@ function toggleFlexPanelSize(e) {
         panel.classList.remove('open_active');
       };
     });
+    if(this.classList.contains('open')) {
+      profile_panel.classList.add('mini_profile');
+      profile_panel.classList.remove('info_appear');
+    } else {
+      profile_panel.classList.remove('mini_profile');
+    };
   };
 };
 
@@ -37,7 +51,7 @@ function toggleFlexPanelSize(e) {
 function toggleProfileWidth(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('wide');
-    flex_panel_container.classList.toggle('hide');
+    flex_blocks_container.classList.toggle('hide');
     profile_column.classList.toggle('info_appear');
     profile_column.classList.toggle('arrow_be_seeing_ya');
     profile_column.classList.toggle('small_face');

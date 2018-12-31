@@ -114,9 +114,9 @@ body {
   text-decoration: underline;
 }
 
-.flex_things.hide {
+/*.flex_things.hide {
   flex: 0;
-}
+}*/
 
 .flex_thing {
   flex: 1;
