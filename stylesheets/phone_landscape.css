@@ -34,7 +34,7 @@
 }
 
 #profile_panel #profile_picture {
-  height: 22vh;
+  height: 20vh;
 }
 
 #profile_panel.mini_profile #profile_picture {
@@ -43,7 +43,7 @@
 }
 
 #profile_panel.big_face #profile_picture {
-  height: 35%;
+  height: 33%;
 }
 
 #profile_panel h1 {
@@ -102,11 +102,11 @@
 }
 
 #flex_panels h3 {
-  font-size: 45px;
+  font-size: 43px;
 }
 
 #flex_panels p {
-  font-size: 35px;
+  font-size: 33px;
 }
 
 .flex_panel > *:first-child {
