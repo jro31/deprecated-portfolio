@@ -1,7 +1,7 @@
 const flex_panel_container = document.getElementById('flex_panels');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
 const profile_column = document.getElementById('profile_column');
-const profile_picture = document.getElementById('profile_picture');
+const profile_picture_div = document.querySelectorAll('.profile_picture');
 const profile_info = document.querySelector('.profile_info');
 const flex_panel1 = document.getElementById('flex_panel1');
 const flex_panel2 = document.getElementById('flex_panel2');
@@ -29,11 +29,15 @@ function toggleWidth(e) {
     flex_panel_container.classList.toggle('hide');
     profile_column.classList.toggle('wide_active');
     profile_column.classList.toggle('arrow_be_seeing_ya');
-    profile_picture.classList.toggle('small_face');
+    profile_column.classList.toggle('small_face');
   };
 };
 
 function addContent() {
+  profile_picture_div.forEach(function(div) {
+    div.innerHTML = `<img id="profile_picture" src="images/profile_picture.jpg" alt="Profile picture" title="" />`
+  });
+
   profile_info.innerHTML = `
   <p>
     My interest in coding spawned from a frustration of wanting apps that just didn&#39;t exist, where I eventually got to the point of saying... well I&#39;ll just learn how to create them myself then.

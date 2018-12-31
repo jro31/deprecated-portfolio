@@ -11,6 +11,10 @@
 
 /* Profile start */
 
+#profile_panel {
+  display: none;
+}
+
 #profile_column {
   background-position: center 75%;
   background-size: 50%;
@@ -38,11 +42,11 @@
   font-size: 200%;
 }
 
-#profile_picture {
+#profile_column #profile_picture {
   height: 25%;
 }
 
-#profile_picture.small_face {
+#profile_column.small_face #profile_picture {
   height: 15%;
 }
 
@@ -51,6 +55,10 @@
   height: 47%;
   font-size: 120%;
   padding: 2% 0;
+}
+
+#profile_column.wide_active > .profile_info {
+  transform: translateY(0);
 }
 
 #profile_column.wide_active > .profile_info {

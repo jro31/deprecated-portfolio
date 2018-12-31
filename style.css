@@ -35,7 +35,7 @@ body {
 
 /* Profile start */
 
-#profile_column {
+.profile {
   overflow: hidden;
   background-color: #EFF7CF;
   color: #273469;
@@ -48,19 +48,19 @@ body {
     background 1s cubic-bezier(0.25, 0.1, 0.25, 1) 1s;
 }
 
-#profile_column:hover {
+.profile:hover {
   cursor: pointer;
 }
 
-#profile_column > * {
+.profile * {
   transition: all 0.7s ease-in-out 0.9s;
 }
 
-#profile_column #titles {
+.profile #titles {
   overflow: visible;
 }
 
-#profile_column h1, #profile_column h3 {
+.profile h1, .profile h3 {
   text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
 }
 
@@ -71,27 +71,23 @@ body {
   border: 2px ridge rgba(255, 255, 255, 1.0);
 }
 
-#profile_column > .profile_info {
+.profile > .profile_info {
   overflow-y: scroll;
 }
 
-#profile_column.wide_active > .profile_info {
-  transform: translateY(0);
-}
-
-#profile_column .social_media {
+.profile .social_media {
   width: inherit;
 }
 
-#profile_column .social_media a {
+.profile .social_media a {
   color: #273469;
 }
 
-#profile_column #linkedin {
+.profile #linkedin {
   display: inline;
 }
 
-#profile_column #github {
+.profile #github {
   display: inline;
 }
 

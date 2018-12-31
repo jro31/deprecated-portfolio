@@ -5,59 +5,66 @@
 /* Banner finish */
 
 #banner {
-  height: 35%;
-  flex: 2;
+  display: none;
 }
 
 /* Profile start */
 
 #profile_column {
+  display: none;
+}
+
+#profile_panel {
+  flex: 2;
   background-position: center 75%;
-  background-size: 50%;
+  background-size: 20%;
   height: 100%;
-  flex: 1;
 }
 
-#profile_column.wide {
+/*#profile_panel.wide {
   flex: 10;
-}
+}*/
 
-#profile_column.arrow_be_seeing_ya {
+/*#profile_panel.arrow_be_seeing_ya {
   background-position: center 500%;
-}
+}*/
 
-#profile_column #titles {
+#profile_panel #titles {
   height: 14%;
 }
 
-#profile_column h1 {
+#profile_panel h1 {
   font-size: 250%;
 }
 
-#profile_column h3 {
+#profile_panel h3 {
   font-size: 200%;
 }
 
-#profile_picture {
+#profile_panel #profile_picture {
   height: 25%;
 }
 
-#profile_picture.small_face {
+#profile_panel #profile_picture.small_face {
   height: 15%;
 }
 
-#profile_column > .profile_info {
+#profile_panel > .profile_info {
   transform: translateY(150%);
   height: 47%;
   font-size: 120%;
   padding: 2% 0;
 }
 
-#profile_column.wide_active > .profile_info {
-  height: 57%;
+#profile_panel.wide_active > .profile_info {
+  transform: translateY(0);
 }
 
-#profile_column .social_media {
+/*#profile_panel.wide_active > .profile_info {
+  height: 57%;
+}*/
+
+#profile_panel .social_media {
   font-size: 350%;
   height: 12%;
 }
