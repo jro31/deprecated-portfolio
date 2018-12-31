@@ -75,6 +75,10 @@
 
 /* Flex panels start */
 
+#flex_blocks {
+  display: none;
+}
+
 #flex_panels {
   flex: 2;
   transition: flex 0.7s ease-in-out;
@@ -90,6 +94,21 @@
 
 .flex_panel.open {
   flex: 4;
+}
+
+#flex_panel1 {
+  background-position: 0 18%;
+  background-size: cover;
+}
+
+#flex_panel2 {
+  background-position: 0 65%;
+  background-size: cover;
+}
+
+#flex_panel3 {
+  background-position: 0 15%;
+  background-size: cover;
 }
 
 /* Flex panels finish */

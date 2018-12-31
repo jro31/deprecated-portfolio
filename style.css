@@ -93,32 +93,32 @@ body {
 
 
 
-/* Flex panels start */
+/* Flex things start */
 
-#flex_panels {
+.flex_things {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   color: #F8F1FF;
 }
 
-#flex_panels a {
+.flex_things a {
   color: #F8F1FF;
 }
 
-#flex_panels a:hover {
+.flex_things a:hover {
   text-decoration: none;
 }
 
-#flex_panels a:hover h3 {
+.flex_things a:hover h3 {
   text-decoration: underline;
 }
 
-#flex_panels.hide {
+.flex_things.hide {
   flex: 0;
 }
 
-.flex_panel {
+.flex_thing {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -128,45 +128,39 @@ body {
   transition: flex 0.9s cubic-bezier(0.61,-0.19, 0.7,-0.11);
 }
 
-.flex_panel:hover {
+.flex_thing:hover {
   cursor: pointer;
 }
 
-.flex_panel > * {
+.flex_thing > * {
   flex: 1 1 33.3%;
   transition: transform 0.5s ease-in-out 0.7s;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
 }
 
-.flex_panel.open_active > *:first-child {
+.flex_thing.open_active > *:first-child {
   transform: translateX(0);
 }
 
-.flex_panel.open_active > *:last-child {
+.flex_thing.open_active > *:last-child {
   transform: translateX(0);
 }
 
-.flex_panel > div {
+.flex_thing > div {
   padding: 3%;
   overflow-y: visible;
 }
 
-#flex_panel1 {
+.flex_thing1 {
   background-image: url('images/water.jpg');
-  background-position: 0 18%;
-  background-size: cover;
 }
 
-#flex_panel2 {
+.flex_thing2 {
   background-image: url('images/field.jpg');
-  background-position: 0 65%;
-  background-size: cover;
 }
 
-#flex_panel3 {
+.flex_thing3 {
   background-image: url('images/jump.jpg');
-  background-position: 0 15%;
-  background-size: cover;
 }
 
-/* Flex panels finish */
+/* Flex things finish */
