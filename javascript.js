@@ -1,6 +1,6 @@
 const flex_panel_container = document.getElementById('flex_panels');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
-const profile_column = document.querySelector('.profile');
+const profile_column = document.getElementById('profile_column');
 const profile_picture = document.getElementById('profile_picture');
 const profile_info = document.querySelector('.profile_info');
 const flex_panel1 = document.getElementById('flex_panel1');

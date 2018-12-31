@@ -1,6 +1,6 @@
-@import 'stylesheets/banner.css';
-@import 'stylesheets/profile.css';
-@import 'stylesheets/flex_panels.css';
+@import 'stylesheets/<800.css' screen and (max-width: 799px);
+@import 'stylesheets/800-1200.css' screen and (min-width: 800px) and (max-width: 1200px);
+@import 'stylesheets/>1200.css' screen and (min-width: 1201px);
 
 * {
   text-align: center;
@@ -19,8 +19,161 @@ body {
   height: 100%;
 }
 
-@media only screen and (max-width: 950px) {
-  #main_column {
-    display: none;
-  }
+
+
+/* Banner start */
+
+#banner {
+  background-image: url('images/mountain.jpg');
+  background-position: 50% 60%;
+  transition: flex 0.7s ease-in-out 0.7s;
 }
+
+/* Banner finish */
+
+
+
+/* Profile start */
+
+#profile_column {
+  overflow: hidden;
+  background-color: #EFF7CF;
+  color: #273469;
+  border-left: 3px ridge rgba(211, 211, 211, 0.5);
+  background-image: url('images/down.svg');
+  background-repeat: no-repeat;
+  padding: 2% 2% 0 2%;
+  transition:
+    flex 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background 1s cubic-bezier(0.25, 0.1, 0.25, 1) 1s;
+}
+
+#profile_column:hover {
+  cursor: pointer;
+}
+
+#profile_column > * {
+  transition: all 0.7s ease-in-out 0.9s;
+}
+
+#profile_column #titles {
+  overflow: visible;
+}
+
+#profile_column h1, #profile_column h3 {
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
+}
+
+#profile_picture {
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 2% 0 2% 0;
+  border: 2px ridge rgba(255, 255, 255, 1.0);
+}
+
+#profile_column > .profile_info {
+  overflow-y: scroll;
+}
+
+#profile_column.wide_active > .profile_info {
+  transform: translateY(0);
+}
+
+#profile_column .social_media {
+  width: inherit;
+}
+
+#profile_column .social_media a {
+  color: #273469;
+}
+
+#profile_column #linkedin {
+  display: inline;
+}
+
+#profile_column #github {
+  display: inline;
+}
+
+/* Profile finish */
+
+
+
+/* Flex panels start */
+
+#flex_panels {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: flex 0.7s ease-in-out 0.7s;
+  color: #F8F1FF;
+}
+
+#flex_panels a {
+  color: #F8F1FF;
+}
+
+#flex_panels a:hover {
+  text-decoration: none;
+}
+
+#flex_panels a:hover h3 {
+  text-decoration: underline;
+}
+
+#flex_panels.hide {
+  flex: 0;
+}
+
+.flex_panel {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+  transition: flex 0.9s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+}
+
+.flex_panel:hover {
+  cursor: pointer;
+}
+
+.flex_panel > * {
+  flex: 1 1 33.3%;
+  transition: transform 0.5s ease-in-out 0.7s;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.flex_panel.open_active > *:first-child {
+  transform: translateX(0);
+}
+
+.flex_panel.open_active > *:last-child {
+  transform: translateX(0);
+}
+
+.flex_panel > div {
+  padding: 3%;
+  overflow-y: visible;
+}
+
+#flex_panel1 {
+  background-image: url('images/water.jpg');
+  background-position: 0 18%;
+  background-size: cover;
+}
+
+#flex_panel2 {
+  background-image: url('images/field.jpg');
+  background-position: 0 65%;
+  background-size: cover;
+}
+
+#flex_panel3 {
+  background-image: url('images/jump.jpg');
+  background-position: 0 15%;
+  background-size: cover;
+}
+
+/* Flex panels finish */
