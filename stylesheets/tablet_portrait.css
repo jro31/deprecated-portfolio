@@ -34,7 +34,7 @@
 }
 
 #profile_panel #profile_picture {
-  height: 22%;
+  height: 22vh;
 }
 
 #profile_panel.mini_profile #profile_picture {

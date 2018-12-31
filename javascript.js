@@ -175,7 +175,7 @@ function addContent() {
       My self-taught technical education includes HTML &amp; CSS, JavaScript 30, CodeWars and Hacking with Swift.
     </p>
     <p>
-      Other education includes a bachelor's degree in business and the Cambridge University Certificate in English Language Teaching to Adults.
+      Other education includes a bachelor's degree in business and the Cambridge University Certificate in English Teaching to Adults.
     </p>
   </div>
   `
