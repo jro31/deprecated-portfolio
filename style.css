@@ -40,8 +40,6 @@ body {
   background-color: #EFF7CF;
   color: #273469;
   border-left: 3px ridge rgba(211, 211, 211, 0.5);
-  background-image: url('images/down.svg');
-  background-repeat: no-repeat;
   padding: 2% 2% 0 2%;
   transition:
     flex 1s cubic-bezier(0.25, 0.1, 0.25, 1),
@@ -53,10 +51,10 @@ body {
 }
 
 .profile * {
-  transition: all 0.7s ease-in-out 0.9s;
+  /*transition: all 0.7s ease-in-out 0.9s;*/
 }
 
-.profile #titles {
+.profile .profile_titles {
   overflow: visible;
 }
 
@@ -101,7 +99,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: flex 0.7s ease-in-out 0.7s;
   color: #F8F1FF;
 }
 

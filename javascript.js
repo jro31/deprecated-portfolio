@@ -1,16 +1,41 @@
 const flex_panel_container = document.getElementById('flex_panels');
 const every_flex_panel = document.querySelectorAll('.flex_panel');
+const profile_panel = document.getElementById('profile_panel');
 const profile_column = document.getElementById('profile_column');
 const profile_picture_div = document.querySelectorAll('.profile_picture');
-const profile_info = document.querySelector('.profile_info');
+const profile_titles = document.querySelectorAll('.profile_titles');
+const profile_info = document.querySelectorAll('.profile_info');
 const flex_panel1 = document.getElementById('flex_panel1');
 const flex_panel2 = document.getElementById('flex_panel2');
 const flex_panel3 = document.getElementById('flex_panel3');
 
-function toggleSize(e) {
+// For <800 screens
+function toggleFullScreenProfile() {
+  flex_panel_container.classList.toggle('hide');
+  profile_panel.classList.toggle('info_appear');
+}
+
+// For <800 screens
+
+
+// For >1200 screens
+function toggleProfileWidth(e) {
+  if(e.target.parentElement.target !== '_blank') {
+    this.classList.toggle('wide');
+    flex_panel_container.classList.toggle('hide');
+    profile_column.classList.toggle('info_appear');
+    profile_column.classList.toggle('arrow_be_seeing_ya');
+    profile_column.classList.toggle('small_face');
+  };
+};
+
+// For >1200 screens
+function toggleFlexPanelSize(e) {
   if(e.target.parentElement.target !== '_blank') {
     this.classList.toggle('open');
     this.classList.toggle('open_active');
+
+    // profile_panel.classLis
 
     const this_id = this.id;
 
@@ -23,22 +48,20 @@ function toggleSize(e) {
   };
 };
 
-function toggleWidth(e) {
-  if(e.target.parentElement.target !== '_blank') {
-    this.classList.toggle('wide');
-    flex_panel_container.classList.toggle('hide');
-    profile_column.classList.toggle('wide_active');
-    profile_column.classList.toggle('arrow_be_seeing_ya');
-    profile_column.classList.toggle('small_face');
-  };
-};
-
 function addContent() {
   profile_picture_div.forEach(function(div) {
     div.innerHTML = `<img id="profile_picture" src="images/profile_picture.jpg" alt="Profile picture" title="" />`
   });
 
-  profile_info.innerHTML = `
+  profile_titles.forEach(function(titles) {
+    titles.innerHTML = `
+      <h1>Jethro Williams</h1>
+      <h3>Fullstack Web Developer</h3>
+    `
+  })
+
+  profile_info.forEach(function(info) {
+    info.innerHTML = `
   <p>
     My interest in coding spawned from a frustration of wanting apps that just didn&#39;t exist, where I eventually got to the point of saying... well I&#39;ll just learn how to create them myself then.
   </p>
@@ -55,6 +78,7 @@ function addContent() {
     Now I'm looking for a project that I'm passionate about, to which I can dedicate myself as I continue to grow, and that allows me to be expressive through coding.
   </p>
   `
+  });
 
   flex_panel1.innerHTML = `
   <div>
@@ -115,8 +139,9 @@ function addContent() {
   `
 };
 
-every_flex_panel.forEach(panel => panel.addEventListener('click', toggleSize));
-profile_column.addEventListener('click', toggleWidth);
+profile_panel.addEventListener('click', toggleFullScreenProfile);
+every_flex_panel.forEach(panel => panel.addEventListener('click', toggleFlexPanelSize));
+profile_column.addEventListener('click', toggleProfileWidth);
 
 document.addEventListener("DOMContentLoaded", addContent);
 

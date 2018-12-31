@@ -16,10 +16,16 @@
 }
 
 #profile_column {
+  background-image: url('../images/down.svg');
+  background-repeat: no-repeat;
   background-position: center 75%;
   background-size: 50%;
   height: 100%;
   flex: 1;
+}
+
+#profile_column * {
+  transition: all 0.7s ease-in-out 0.9s;
 }
 
 #profile_column.wide {
@@ -30,7 +36,7 @@
   background-position: center 500%;
 }
 
-#profile_column #titles {
+#profile_column .profile_titles {
   height: 14%;
 }
 
@@ -57,11 +63,8 @@
   padding: 2% 0;
 }
 
-#profile_column.wide_active > .profile_info {
+#profile_column.info_appear > .profile_info {
   transform: translateY(0);
-}
-
-#profile_column.wide_active > .profile_info {
   height: 57%;
 }
 
@@ -78,6 +81,7 @@
 
 #flex_panels {
   flex: 3;
+  transition: flex 0.7s ease-in-out 0.7s;
 }
 
 .flex_panel > *:first-child {
