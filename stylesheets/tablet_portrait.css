@@ -1,3 +1,9 @@
+#main_column {
+  flex-direction: column;
+}
+
+
+
 /* Banner start */
 
 #banner {
