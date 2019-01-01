@@ -34,7 +34,7 @@
 }
 
 #profile_panel #profile_picture {
-  height: 20vh;
+  height: 18vh;
 }
 
 #profile_panel.mini_profile #profile_picture {
@@ -109,16 +109,41 @@
   font-size: 33px;
 }
 
+.flex_panel {
+  transition: flex 0.9s ease-in-out;
+}
+
+.flex_panel > * {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.flex_panel > *:first-child, .flex_panel > *:last-child {
+  flex: 1 1 33.3%;
+  transition: transform 0.5s ease-in-out 0.7s;
+}
+
 .flex_panel > *:first-child {
   transform: translateX(-100%);
+}
+
+.flex_panel.open_active > *:first-child {
+  transform: translateX(0);
+}
+
+.flex_panel.open_active > h2 {
+  flex: 0;
 }
 
 .flex_panel > *:last-child {
   transform: translateX(100%);
 }
 
+.flex_panel.open_active > *:last-child {
+  transform: translateX(0);
+}
+
 .flex_panel.open {
-  flex: 6;
+  flex: 13;
 }
 
 #flex_panel1 {
