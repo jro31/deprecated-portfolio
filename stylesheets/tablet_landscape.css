@@ -166,6 +166,214 @@
 .flex_panel > *:first-child {
   transform: translateX(-100%);
 }
+#main_column {
+  flex-direction: row;
+}
+
+
+
+/* Banner start */
+
+#banner {
+  display: none;
+}
+
+/* Banner finish */
+
+
+
+/* Profile start */
+
+#profile_column {
+  display: none;
+}
+
+#profile_panel {
+  flex: 4;
+  height: 100%;
+  background-image: linear-gradient(#EFF7CF, orange);
+}
+
+#profile_panel * {
+  transition: all 0.7s ease-in-out;
+}
+
+#profile_panel .full_screen_profile {
+  flex: 10;
+}
+
+#profile_panel.mini_profile {
+  flex: 1;
+  padding: 0;
+}
+
+#profile_panel.landscaping .profile_picture {
+  /*width: 45%;*/
+  /*display: inline-block;*/
+  float: left;
+}
+
+#profile_panel #profile_picture {
+  height: 35vh;
+}
+
+#profile_panel.mini_profile #profile_picture {
+  height: 0;
+  border: none;
+}
+
+#profile_panel.big_face #profile_picture {
+  height: 22vh;
+}
+
+#profile_panel.landscaping .profile_titles {
+  height: 22vh;
+}
+
+#profile_panel.mini_profile .profile_titles {
+  height: 100vh;
+  width: 100%;
+}
+
+#profile_panel h1 {
+  font-size: 40px;
+}
+
+#profile_panel.landscaping h1 {
+  font-size: 45px;
+}
+
+#profile_panel.mini_profile h1 {
+  transform:
+    rotate(-90deg) translateX(-40vh) translateY(-15%);
+  float: left;
+  transform-origin: bottom bottom 0;
+}
+
+#profile_panel h3 {
+  font-size: 30px;
+}
+
+#profile_panel.landscaping h3 {
+  font-size: 35px;
+}
+
+#profile_panel.mini_profile h3 {
+  transform: translateX(200%);
+}
+
+#profile_panel > .profile_info {
+  transform: translateY(300%);
+  height: 60%;
+  font-size: 25px;
+  padding: 2% 0;
+  width: 100%;
+}
+
+#profile_panel.info_appear > .profile_info {
+  transform: translateY(0);
+}
+
+#profile_panel .profile_social_media {
+  font-size: 50px;
+  height: 10%;
+}
+
+#profile_panel.mini_profile .profile_social_media {
+  transform: translateX(-100%);
+}
+
+/* Profile finish */
+
+
+
+/* Flex panels start */
+
+#flex_blocks {
+  display: none;
+}
+
+#flex_panels {
+  flex: 8;
+  transition: flex 0.7s ease-in-out;
+}
+
+#flex_panels.hide {
+  flex: 0;
+}
+
+#flex_panels h2 {
+  font-size: 35px;
+}
+
+#flex_panels h3 {
+  font-size: 28px;
+}
+
+#flex_panels p {
+  font-size: 20px;
+}
+
+.flex_panel {
+  transition: flex 0.9s ease-in-out;
+}
+
+.flex_panel.panel_bye_bye {
+  flex: 0;
+}
+
+.flex_panel > * {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.flex_panel > *:first-child, .flex_panel > *:last-child {
+  flex: 1 1 33.3%;
+  transition: transform 0.5s ease-in-out 0.7s;
+}
+
+.flex_panel > *:first-child {
+  transform: translateX(-100%);
+}
+
+.flex_panel.open_active > *:first-child {
+  transform: translateX(0);
+}
+
+.flex_panel.open_active > h2 {
+  flex: 0;
+}
+
+.flex_panel.panel_bye_bye h2 {
+  display: none;
+}
+
+.flex_panel > *:last-child {
+  transform: translateX(100%);
+}
+
+.flex_panel.open_active > *:last-child {
+  transform: translateX(0);
+}
+
+#flex_panel1 {
+  background-image: url('../images/lake_mountain.jpg');
+  background-position: 40% 18%;
+  background-size: cover;
+}
+
+#flex_panel2 {
+  background-image: url('../images/rocky_water.jpg');
+  background-position: 0 65%;
+  background-size: cover;
+}
+
+#flex_panel3 {
+  background-image: url('../images/starry_mountain.jpg');
+  background-position: 0 80%;
+  background-size: cover;
+}
+
+/* Flex panels finish */
 
 .flex_panel.open_active > *:first-child {
   transform: translateX(0);
