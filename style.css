@@ -51,10 +51,6 @@ body {
   cursor: pointer;
 }
 
-.profile * {
-  /*transition: all 0.7s ease-in-out 0.9s;*/
-}
-
 .profile .profile_titles {
   overflow: visible;
 }
@@ -136,16 +132,16 @@ body {
   padding: 3%;
 }
 
-.flex_thing1 {
-  background-image: url('images/water.jpg');
+/*.flex_thing1 {
+
 }
 
 .flex_thing2 {
-  background-image: url('images/field.jpg');
+
 }
 
 .flex_thing3 {
-  background-image: url('images/jump.jpg');
-}
+
+}*/
 
 /* Flex things finish */
