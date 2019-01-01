@@ -16,7 +16,6 @@ body {
 #main_column {
   flex: 3;
   display: flex;
-  /*flex-direction: column;*/
   height: 100%;
 }
 
@@ -110,10 +109,6 @@ body {
 .flex_things a:hover h3 {
   text-decoration: underline;
 }
-
-/*.flex_things.hide {
-  flex: 0;
-}*/
 
 .flex_thing {
   flex: 1;

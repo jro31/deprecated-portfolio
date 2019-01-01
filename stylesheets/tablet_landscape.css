@@ -1,5 +1,5 @@
 #main_column {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 
@@ -35,11 +35,18 @@
 }
 
 #profile_panel.mini_profile {
-  flex: 0.8;
+  flex: 1;
+  padding: 0;
+}
+
+#profile_panel.landscaping .profile_picture {
+  /*width: 45%;*/
+  /*display: inline-block;*/
+  float: left;
 }
 
 #profile_panel #profile_picture {
-  height: 18vh;
+  height: 35vh;
 }
 
 #profile_panel.mini_profile #profile_picture {
@@ -48,26 +55,51 @@
 }
 
 #profile_panel.big_face #profile_picture {
-  height: 33%;
+  height: 22vh;
+}
+
+#profile_panel.landscaping .profile_titles {
+  height: 22vh;
+}
+
+#profile_panel.mini_profile .profile_titles {
+  height: 100vh;
+  width: 100%;
 }
 
 #profile_panel h1 {
-  font-size: 60px;
+  font-size: 40px;
 }
 
-#profile_panel h3 {
+#profile_panel.landscaping h1 {
   font-size: 45px;
 }
 
+#profile_panel.mini_profile h1 {
+  transform:
+    rotate(-90deg) translateX(-40vh) translateY(-15%);
+  float: left;
+  transform-origin: bottom bottom 0;
+}
+
+#profile_panel h3 {
+  font-size: 30px;
+}
+
+#profile_panel.landscaping h3 {
+  font-size: 35px;
+}
+
 #profile_panel.mini_profile h3 {
-  transform: translateX(100%);
+  transform: translateX(200%);
 }
 
 #profile_panel > .profile_info {
   transform: translateY(300%);
-  height: 47%;
-  font-size: 40px;
+  height: 60%;
+  font-size: 25px;
   padding: 2% 0;
+  width: 100%;
 }
 
 #profile_panel.info_appear > .profile_info {
@@ -75,7 +107,7 @@
 }
 
 #profile_panel .profile_social_media {
-  font-size: 80px;
+  font-size: 50px;
   height: 10%;
 }
 
@@ -103,19 +135,23 @@
 }
 
 #flex_panels h2 {
-  font-size: 55px;
+  font-size: 35px;
 }
 
 #flex_panels h3 {
-  font-size: 43px;
+  font-size: 28px;
 }
 
 #flex_panels p {
-  font-size: 33px;
+  font-size: 20px;
 }
 
 .flex_panel {
   transition: flex 0.9s ease-in-out;
+}
+
+.flex_panel.panel_bye_bye {
+  flex: 0;
 }
 
 .flex_panel > * {
@@ -139,16 +175,16 @@
   flex: 0;
 }
 
+.flex_panel.panel_bye_bye h2 {
+  display: none;
+}
+
 .flex_panel > *:last-child {
   transform: translateX(100%);
 }
 
 .flex_panel.open_active > *:last-child {
   transform: translateX(0);
-}
-
-.flex_panel.open {
-  flex: 13;
 }
 
 #flex_panel1 {

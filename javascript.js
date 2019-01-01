@@ -18,10 +18,12 @@ function toggleFullScreenProfile(e) {
     flex_panel_container.classList.toggle('hide');
     profile_panel.classList.toggle('big_face');
     profile_panel.classList.toggle('info_appear');
+    profile_panel.classList.toggle('landscaping');
     profile_panel.classList.remove('mini_profile');
     every_flex_panel.forEach(function(panel) {
       panel.classList.remove('open');
       panel.classList.remove('open_active');
+      panel.classList.remove('panel_bye_bye');
     });
   };
 };
@@ -39,6 +41,7 @@ function toggleFlexPanelSize(e) {
       if(panel.id !== this_id) {
         panel.classList.remove('open');
         panel.classList.remove('open_active');
+        panel.classList.toggle('panel_bye_bye');
       };
     });
     if(this.classList.contains('open')) {
