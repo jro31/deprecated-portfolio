@@ -27,7 +27,7 @@
 }
 
 #profile_panel * {
-  transition: all 0.7s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #profile_panel .full_screen_profile {
@@ -160,7 +160,7 @@
 
 .flex_panel > *:first-child, .flex_panel > *:last-child {
   flex: 1 1 33.3%;
-  transition: transform 0.5s ease-in-out 0.7s;
+  transition: transform 1s ease-in-out 0.8s;
 }
 
 .flex_panel > *:first-child {
