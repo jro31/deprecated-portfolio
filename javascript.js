@@ -117,6 +117,7 @@ function addContent() {
     socialMedia.innerHTML = `
       <div id="linkedin"><a href="https://www.linkedin.com/in/jethrowilliams/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       <div id="github"><a href="https://github.com/jro31" target="_blank"><i class="fab fa-github"></i></a></div>
+      <div id="codewars"><a href="https://www.codewars.com/users/jro31" target="_blank"><img src="images/codewars.svg" alt="" title="" /></a></div>
     `
   });
 

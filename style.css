@@ -38,7 +38,7 @@ body {
 .profile {
   overflow: hidden;
   background-color: #EFF7CF;
-  color: #273469;
+  color: #273469; /* If you change this you'll also need to change the color of the Codewars svg manually */
   padding: 2% 2% 0 2%;
 }
 
@@ -79,6 +79,15 @@ body {
 
 .profile #github {
   display: inline;
+}
+
+.profile #codewars {
+  display: inline;
+}
+
+.profile #codewars img {
+  height: 1em;
+  margin-top: -0.25em;
 }
 
 /* Profile finish */
